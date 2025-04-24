@@ -1,8 +1,9 @@
+package com.projeto.trigonometria;
 import java.util.*;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void App(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         List<List<String>> operacoes = new ArrayList<>();
