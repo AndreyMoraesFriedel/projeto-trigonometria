@@ -8,7 +8,7 @@ public class App {
 
         List<List<String>> operacoes = new ArrayList<>();
 
-        operacoes.add(Arrays.asList("Ponto no plano cartesiano", "Distância entre pontos", "Inclinação da reta"));
+        operacoes.add(Arrays.asList("Ponto no plano cartesiano", "Distância entre pontos", "criar reta","mostrar informações da reta"));
         operacoes.add(Arrays.asList(""));
         operacoes.add(Arrays.asList(""));
 
@@ -52,6 +52,15 @@ switch (escolha) {
     case 1: // assunto 0, operação 1: distância entre pontos
         new CartesianPlaneChart().calcularDistanciaEntrePontos();
         break;
+    
+    case 2: // assunto 0, operação 2: criar reta
+        new CartesianPlaneChart().mostrarGraficoComReta();
+        break;
+        
+    case 3: // assunto 0 (Plano cartesiano), operação 2 (Inclinação da reta)
+        new CartesianPlaneChart().mostrarGraficoComRetaInclinação();
+        break;
+    
 
     default:
         System.out.println("Operação ainda não implementada.");
@@ -59,4 +68,5 @@ switch (escolha) {
 
             ///////////// Assunto 1 - XXXX /////////////
     }
+
 }
