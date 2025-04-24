@@ -17,6 +17,7 @@ public class CartesianPlaneChart {
         Scanner scanner = new Scanner(System.in);
         XYSeries series = new XYSeries("Pontos");
 
+        // Pergunta os pontos//
         System.out.print("Quantos pontos você deseja adicionar? ");
         int quantidade = scanner.nextInt();
 
@@ -56,15 +57,44 @@ public class CartesianPlaneChart {
 
         XYPlot plot = chart.getXYPlot();
 
+        //Linha do eixo X e Y//
+        plot.setDomainCrosshairVisible(true); // linha no eixo X
+        plot.setRangeCrosshairVisible(true);  // linha no eixo Y
+        plot.setDomainCrosshairValue(0);      // centraliza no X = 0
+        plot.setRangeCrosshairValue(0);       // centraliza no Y = 0
+
+        // Configurações dos eixos X e Y //
         NumberAxis eixoX = (NumberAxis) plot.getDomainAxis();
         eixoX.setTickUnit(new NumberTickUnit(1)); // Ticks de 1 em 1
 
         NumberAxis eixoY = (NumberAxis) plot.getRangeAxis();
         eixoY.setTickUnit(new NumberTickUnit(1)); // Ticks de 1 em 1
 
+        // Configura o range dos eixos X e Y //
         eixoX.setRange(-10, 10); // mostra de -10 a 10 no eixo X
         eixoY.setRange(-10, 10); // mostra de -10 a 10 no eixo Y
 
-                
+        scanner.close();      
+    }
+
+    public void calcularDistanciaEntrePontos() {
+        Scanner scanner = new Scanner(System.in);
+    
+        System.out.println("Digite as coordenadas do primeiro ponto:");
+        System.out.print("X1: ");
+        double x1 = scanner.nextDouble();
+        System.out.print("Y1: ");
+        double y1 = scanner.nextDouble();
+    
+        System.out.println("Digite as coordenadas do segundo ponto:");
+        System.out.print("X2: ");
+        double x2 = scanner.nextDouble();
+        System.out.print("Y2: ");
+        double y2 = scanner.nextDouble();
+    
+        double distancia = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+        System.out.printf("A distância entre os pontos é: %.4f\n", distancia);
+    
+        scanner.close();
     }
 }

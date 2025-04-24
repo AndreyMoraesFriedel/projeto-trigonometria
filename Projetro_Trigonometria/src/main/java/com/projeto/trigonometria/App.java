@@ -41,18 +41,22 @@ public class App {
 
 
 ////////////////////////////////// Operaçoes //////////////////////////////////
-///////////// Assunto 0 - Plano cartesiano /////////////
+            ///////////// Assunto 0 - Plano cartesiano /////////////
 int escolha = assunto * 100 + operacao;
 
 switch (escolha) {
-    case 0: // assunto 0 (Plano cartesiano), operação 0 (Ponto no plano cartesiano)
+    case 0: // assunto 0: Plano cartesiano, operação 0: Ponto no plano cartesiano
         new CartesianPlaneChart().mostrarGrafico();
         break;
 
+    case 1: // assunto 0, operação 1: distância entre pontos
+        new CartesianPlaneChart().calcularDistanciaEntrePontos();
+        break;
 
     default:
         System.out.println("Operação ainda não implementada.");
 }
-///////////// Assunto 1 - XXXX /////////////
+
+            ///////////// Assunto 1 - XXXX /////////////
     }
 }
