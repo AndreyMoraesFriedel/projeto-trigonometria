@@ -1,9 +1,9 @@
 package com.projeto.trigonometria;
-import java.util.*;
-import java.util.Scanner;
 
-public class Main {
-    public static void App(String[] args) {
+import java.util.*;
+
+public class App {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         List<List<String>> operacoes = new ArrayList<>();
@@ -38,5 +38,21 @@ public class Main {
         }
 
         System.out.println("Você escolheu: " + listaOperacoes.get(operacao));
+
+
+////////////////////////////////// Operaçoes //////////////////////////////////
+///////////// Assunto 0 - Plano cartesiano /////////////
+int escolha = assunto * 100 + operacao;
+
+switch (escolha) {
+    case 0: // assunto 0 (Plano cartesiano), operação 0 (Ponto no plano cartesiano)
+        new CartesianPlaneChart().mostrarGrafico();
+        break;
+
+
+    default:
+        System.out.println("Operação ainda não implementada.");
+}
+///////////// Assunto 1 - XXXX /////////////
     }
 }
