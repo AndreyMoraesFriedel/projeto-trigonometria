@@ -181,7 +181,7 @@ public class CartesianPlaneChart {
             double x2 = scanner.nextDouble();
             System.out.print("Y2: ");
             double y2 = scanner.nextDouble();
-    
+            scanner.close();
             // Calculando a inclinação (coeficiente angular)
             double m = (y2 - y1) / (x2 - x1);  // Inclinação
             // Calculando o intercepto com o eixo Y
