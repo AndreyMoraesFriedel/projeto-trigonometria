@@ -67,6 +67,7 @@ switch (escolha) {
 }
 
             ///////////// Assunto 1 - XXXX /////////////
+            scanner.close();
     }
 
 }

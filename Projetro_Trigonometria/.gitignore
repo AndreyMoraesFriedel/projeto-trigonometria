@@ -1,0 +1,28 @@
+# Ignora a pasta de build do Maven
+/target/
+
+# Ignora arquivos de classe compilados
+*.class
+
+# Ignora configurações do VS Code
+.vscode/
+
+# Ignora arquivos temporários do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ignora logs e relatórios
+*.log
+
+# Ignora arquivos de backup comuns
+*~
+
+# Ignora arquivos do Maven gerados automaticamente
+dependency-reduced-pom.xml
+release.properties
+
+# Ignora arquivos de configuração de IDEs (opcional, se usar Eclipse ou IntelliJ)
+*.iml
+.idea/
+*.ipr
+*.iws
